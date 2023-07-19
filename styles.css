@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100&display=swap');
+.hidden {
+  display: none;
+}
+
+:root {
+  background-color: #181617; /* CREDIT: https://realtimecolors.com/ -- Used a Generated Palette. Thanks! */
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #9c9698;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5f4f5;
+}
+
+header, .area, .input, .person-logo, .settings-menu, .dropdown-menu, .support-contact {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown, .copied-alert {
+  display: flex;
+  justify-content: right;
+  gap: 3rem;
+}
+
+.logo {
+  width: 18.75rem;
+}
+
+.menu, .copy {
+  width: 1rem;
+  height: 1rem;
+}
+
+.generate-area {
+  padding: 2rem;
+  border-radius: 1rem;
+  width: fit-content;
+  max-width: 100rem;
+  height: fit-content;
+  background-color: #7b7477;
+}
+
+.user-in {
+  color: #f5f4f5;
+  background-color: #9c9698;
+  border: none;
+  border-radius: 1rem;
+  width: 3rem;
+}
+
+.user-confirm, .button {
+  background-color: #9c9698;
+  border: none;
+  border-radius: 1rem;
+  width: fit-content;
+  color: #f5f4f5;
+}
+
+.input {
+  gap: 5rem;
+}
+
+.user-confirm:hover, .menu:hover, .faq-icon:hover, .support-icon:hover , .settings-icon:hover, .button:hover, .exit-icon:hover, .light-dark:hover, .copy:hover {
+  cursor: pointer;
+  animation: hover 2s infinite linear;
+}
+
+@keyframes hover {
+  0% {
+      transform: translateY(0px);
+  }
+  25% {
+      transform: translateY(2px);
+  }
+  50% {
+      transform: translateY(0px);
+  }
+ 75% {
+      transform: translateY(2px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+.drop-main, .settings-main {
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #7b7477;
+}
+
+.menu-items {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.faq-icon, .support-icon , .settings-icon, .exit-icon {
+  width: 1.5rem;
+}
+
+.copy-main {
+  background-color: #7b7477;
+  width: fit-content;
+  height: fit-content;
+  padding: .5rem 5rem .5rem 5rem;
+  border-radius: 1rem;
+}
+
+.bar {
+  animation: time 5s infinite linear;
+}
+
+@keyframes time {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.contact-logo {
+  width: 5rem;
+}
+
+.support-contact {
+  gap: 5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: fit-content;
+  background-color: #7b7477c2;
+}
+
+/*
+
+
+  ______ _____ _______ _     _ _     _ ______    _______  _____  _______    / __   _  _____  _______        _______ _______ ______   _____ 
+ |  ____   |      |    |_____| |     | |_____]   |       |     | |  |  |   /  | \  | |     |    |    |      |_____| |  |  | |_____] |     |
+ |_____| __|__    |    |     | |_____| |_____] . |_____  |_____| |  |  |  /   |  \_| |_____|    |    |_____ |     | |  |  | |_____] |_____|
+                                                                         /                                                                 
+
+
+*/
