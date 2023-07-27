@@ -2,132 +2,95 @@
 .hidden {
   display: none;
 }
-
+.close-modal {
+  visibility: visible;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+}
 :root {
-  background-color: #181617; /* CREDIT: https://realtimecolors.com/ -- Used a Generated Palette. Thanks! */
+  background-color: #070807; /* CREDIT: https://realtimecolors.com/ -- Used a Generated Palette. Thanks! */
   scroll-behavior: smooth;
 }
-
 body {
-  padding: 0%;
   margin: 0%;
+  padding: 0%;
 }
 
-a {
-  text-decoration: none;
+.footer-logo {
+  width: 2rem;
 }
 
-::-webkit-scrollbar {
-  width: .5rem;
+.alert-copy {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
 }
 
-::-webkit-scrollbar-track {
-  background: #9c9698;
+.user-section {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.userInput {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.output, #loremcraft, .text {
+  display: flex;
+  justify-content: center;
+}
+
+.main-out {
+  background-color: #141415;
+  width: fit-content;
+  max-width: 90rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.copy:hover, .whyUs__images:hover {
+  cursor: pointer;
+  animation: bob 2s infinite linear;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #f5f4f5;
 }
 
-header, .area, .input, .person-logo, .settings-menu, .dropdown-menu, .support-contact {
-  display: flex;
-  justify-content: center;
-}
-
-.dropdown, .copied-alert {
-  display: flex;
-  justify-content: right;
-  gap: 3rem;
-}
-
-.logo {
-  width: 18.75rem;
-}
-
-.menu, .copy {
-  width: 1rem;
-  height: 1rem;
-}
-
-.generate-area {
-  padding: 2rem;
-  border-radius: 1rem;
-  width: fit-content;
-  max-width: 100rem;
-  height: fit-content;
-  background-color: #7b7477;
-}
-
-.user-in {
-  color: #f5f4f5;
-  background-color: #9c9698;
-  border: none;
-  border-radius: 1rem;
-  width: 3rem;
-}
-
-.user-confirm, .button {
-  background-color: #9c9698;
-  border: none;
-  border-radius: 1rem;
-  width: fit-content;
-  color: #f5f4f5;
-}
-
-.input {
+.text {
+  align-items: center;
   gap: 5rem;
 }
 
-.user-confirm:hover, .menu:hover, .faq-icon:hover, .support-icon:hover , .settings-icon:hover, .button:hover, .exit-icon:hover, .light-dark:hover, .copy:hover {
-  cursor: pointer;
-  animation: hover 2s infinite linear;
+.generateOptions {
+  border-radius: 1rem;
 }
 
-@keyframes hover {
+@keyframes bob {
   0% {
-      transform: translateY(0px);
+    transform: translateY(-2px);
   }
   25% {
-      transform: translateY(2px);
+    transform: translateY(0px);
   }
   50% {
-      transform: translateY(0px);
+    transform: translateY(2px);
   }
- 75% {
-      transform: translateY(2px);
+  75% {
+    transform: translateY(0px);
   }
   100% {
-      transform: translateY(0px);
+    transform: translateY(-2px);
   }
-}
-
-.drop-main, .settings-main {
-  width: fit-content;
-  height: fit-content;
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: #7b7477;
-}
-
-.menu-items {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.faq-icon, .support-icon , .settings-icon, .exit-icon {
-  width: 1.5rem;
-}
-
-.copy-main {
-  background-color: #7b7477;
-  width: fit-content;
-  height: fit-content;
-  padding: .5rem 5rem .5rem 5rem;
-  border-radius: 1rem;
-}
-
-.bar {
-  animation: time 5s infinite linear;
 }
 
 @keyframes time {
@@ -139,20 +102,25 @@ header, .area, .input, .person-logo, .settings-menu, .dropdown-menu, .support-co
   }
 }
 
-.contact-logo {
-  width: 5rem;
+::-webkit-scrollbar {
+  width: .5rem;
 }
 
-.support-contact {
-  gap: 5rem;
+::-webkit-scrollbar-track {
+  background: #9c9698;
 }
 
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: fit-content;
-  background-color: #7b7477c2;
+@media (width <= 460px) {
+  .user-section {
+    display: flex;
+    flex-flow: wrap column;
+  }
+}
+@media (width <= 400px) {
+  .images {
+    display: flex;
+    flex-flow: column wrap;
+  }
 }
 
 /*
